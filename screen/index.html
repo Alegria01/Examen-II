@@ -3,11 +3,12 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8"> ;
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Vieport" content="width=device-width">
     <title>Examen Alegria </title>
     <link rel="stylesheet" href="../ccs/bootstrap.min.css">
+    <link rel="stylesheet" href="../ccs/funcion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 
@@ -21,7 +22,6 @@
 
     <!--/.Menu-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -30,10 +30,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#Peliculas">Peliculas <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#Series">Series</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -48,7 +48,7 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#Home">Home</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -60,7 +60,7 @@
     <!--/.Menu-->
 
     <!--/.carosel-->
-    <div class="container">
+    <div class="container-fluid" id="Home">
         <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
             <!--Indicators-->
             <ol class="carousel-indicators">
@@ -148,7 +148,7 @@
 
     </div>
     <section>
-        <div class="container-fluid">
+        <div class="container-fluid" id="Peliculas">
             <div class="card-header text-center bg-dark">
                 <small class="text-white">
                     <h5 class="display-6">Peliculas Destacadas</h5>
@@ -205,7 +205,7 @@
 
 
 
-        <div class="container-fluid">
+        <div class="container-fluid" id="Series">
             <div class="card-header text-center bg-primary">
                 <small class="text-white">
                     <h5 class="display-6">Series</h5>
@@ -250,10 +250,13 @@
 
                 </div>
                 <div class="col-6 col-sm3 col-md-2" style="left: 20px; right: 30px;">
-                    <figure>
-                        <img class="img-fluid" src="../assets/imagenes/serie6.png">
-                        <h5 class=" text-center">Gin Tama</h5>
-                    </figure>
+                    <a href="" data-toggle="modal" data-target="#exampleModal">
+                        <figure>
+
+                            <img class="img-fluid" src="../assets/imagenes/serie6.png">
+                            <h5 class=" text-center">Gin Tama</h5>
+                        </figure>
+                    </a>
 
                 </div>
             </div>
@@ -262,30 +265,63 @@
 
 
     </section>
+ 
 
-
-
-
-    <div class="modal" tabindex="-1" role="dialog">
+    <!-- Modal -->
+    <div   class="modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Gin Tama</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                     
+                        <figure>
+                            <img src="../assets/imagenes/serie6.png" width="30%" height="30%">
+                        </figure>
+                    <h3>Reseña</h3>
+                    <font ><h5 >Es una mini serie de anime basada en una novela ligera del autor Hideaki Sorachi</h5></font>
+                     <h4>Categoria:<h5>Acción</h5> </h4>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="modal-footer justify-content-center !Impotant">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
 
-
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Open modal
+  </button>
+  
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
 
 
 
@@ -301,6 +337,7 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
         </script>
     <script src="../js/style.js"></script>
+    <script src="../ccs/funcion.css"></script>
 
 </body>
 
